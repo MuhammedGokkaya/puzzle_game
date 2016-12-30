@@ -54,9 +54,8 @@ public class puzzle {
 		            	
 		        }
 		    }
-		  //System.out.println(tablo[3][3]);
 		}
-	public  void kontrolYap(int sayi){
+	public  void degisimYap(int sayi){
 		int i, j;
 	    int temp1=0,temp2=0,tut1=0,tut2=0;
 	    for( i = 0; i < 4; i++ ) {
@@ -86,7 +85,7 @@ public class puzzle {
 		 return 0;
 		
 	}
-	public int koseKontrol(int sayi){
+	public int yerKontrol(int sayi){
 		int i, j;
 	    int sayac=0;
 	    for( i = 0; i < 4; i++ ) {
@@ -311,10 +310,10 @@ public static void main(String[] args) {
         	rakam = giris.nextInt();
         	hamle++;
 
-            //system("clear");
-            int index=nesne.koseKontrol(rakam);
+         
+            int index=nesne.yerKontrol(rakam);
             if(nesne.tasKontrol(index)==1){
-                nesne.kontrolYap(rakam);
+                nesne.degisimYap(rakam);
 
                 nesne.tabloYaz();
                 if(nesne.oyunBitis()==1)
